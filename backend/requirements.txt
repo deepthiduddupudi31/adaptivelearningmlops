@@ -12,3 +12,5 @@ pwdlib[argon2]
 azure-storage-blob
 azure-identity
 numpy
+azure-core
+pytest
