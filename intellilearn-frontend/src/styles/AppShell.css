@@ -1,0 +1,318 @@
+.app-shell {
+    min-height: 100vh;
+    background: #f6f7fb;
+    color: #172b4d
+}
+
+.app-topbar {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 100;
+    height: 72px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 0 24px;
+    background: rgba(255, 255, 255, .98);
+    border-bottom: 1px solid #e5e9f2;
+    box-shadow: 0 3px 14px rgba(31, 41, 55, .035)
+}
+
+.app-header-left,
+.app-brand,
+.app-workspace {
+    display: flex;
+    align-items: center
+}
+
+.app-header-left {
+    min-width: 0;
+    gap: 12px
+}
+
+.app-brand {
+    gap: 10px;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #172b4d;
+    text-align: left;
+    cursor: pointer
+}
+
+.app-brand-icon {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    background: #6257d9;
+    border-radius: 13px
+}
+
+.app-brand-copy {
+    display: grid;
+    gap: 2px
+}
+
+.app-brand-copy strong {
+    font-size: 17px;
+    line-height: 1.2;
+    font-weight: 800
+}
+
+.app-brand-copy small {
+    color: #77839a;
+    font-size: 11px
+}
+
+.app-menu-button {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #e4e8f1;
+    border-radius: 11px;
+    color: #334155;
+    background: #fff;
+    cursor: pointer
+}
+
+.app-menu-button:hover,
+.app-logout-button:hover {
+    background: #f4f3ff
+}
+
+.app-workspace {
+    min-width: 0;
+    gap: 10px;
+    color: #5c6880;
+    font-size: 13px
+}
+
+.app-user-name {
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.app-logout-button {
+    padding: 9px 12px;
+    border: 1px solid #e4e8f1;
+    border-radius: 9px;
+    background: #fff;
+    color: #4f46b5;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.app-sidebar {
+    position: fixed;
+    z-index: 120;
+    top: 72px;
+    bottom: 0;
+    left: 0;
+    width: min(290px, 86vw);
+    box-sizing: border-box;
+    overflow-y: auto;
+    padding: 24px 14px;
+    background: #fff;
+    border-right: 1px solid #e5e9f2;
+    transform: translateX(-105%);
+    box-shadow: none;
+    transition: transform 220ms ease
+}
+
+.app-sidebar.is-open {
+    transform: translateX(0);
+    box-shadow: 18px 0 48px rgba(15, 23, 42, .16)
+}
+
+.app-sidebar-label {
+    padding: 0 12px 14px;
+    color: #8a93a7;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .09em
+}
+
+.app-nav-list {
+    display: grid;
+    gap: 6px
+}
+
+.app-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 44px;
+    box-sizing: border-box;
+    padding: 12px 13px;
+    border: 0;
+    border-radius: 10px;
+    color: #58647a;
+    background: transparent;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer
+}
+
+.app-nav-item:hover {
+    background: #f6f5ff
+}
+
+.app-nav-item.is-active {
+    color: #5140df;
+    background: #efedff;
+    font-weight: 750
+}
+
+.app-sidebar-foot {
+    margin: 28px 12px 0;
+    padding-top: 18px;
+    border-top: 1px solid #edf0f6;
+    color: #8a93a7;
+    font-size: 12px;
+    line-height: 1.5
+}
+
+.app-content {
+    min-width: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin-left: 0;
+    padding-top: 72px
+}
+
+.app-page-content {
+    min-width: 0;
+    box-sizing: border-box
+}
+
+.app-drawer-backdrop {
+    display: block;
+    position: fixed;
+    inset: 72px 0 0;
+    z-index: 110;
+    border: 0;
+    background: rgba(15, 23, 42, .38)
+}
+
+.footer {
+    margin-left: 0
+}
+
+@media(max-width:760px) {
+    .app-topbar {
+        height: 64px;
+        padding: 0 12px;
+        gap: 8px
+    }
+
+    .app-brand-icon {
+        width: 36px;
+        height: 36px;
+        flex-basis: 36px;
+        border-radius: 11px
+    }
+
+    .app-brand-copy strong {
+        font-size: 14px
+    }
+
+    .app-brand-copy small {
+        display: none
+    }
+
+    .app-workspace {
+        gap: 6px
+    }
+
+    .app-workspace>svg,
+    .app-user-name {
+        display: none
+    }
+
+    .app-logout-button {
+        padding: 8px 9px;
+        font-size: 12px
+    }
+
+    .app-sidebar {
+        top: 64px;
+        width: min(290px, 86vw);
+        transform: translateX(-105%);
+        box-shadow: none;
+        z-index: 120
+    }
+
+    .app-sidebar.is-open {
+        transform: translateX(0);
+        box-shadow: 18px 0 48px rgba(15, 23, 42, .16)
+    }
+
+    .app-drawer-backdrop {
+        display: block;
+        position: fixed;
+        inset: 64px 0 0;
+        z-index: 110;
+        border: 0;
+        background: rgba(15, 23, 42, .38)
+    }
+
+    .app-content {
+        margin-left: 0;
+        padding-top: 64px
+    }
+
+    .app-page-content {
+        width: 100%;
+        padding-left: 14px;
+        padding-right: 14px
+    }
+
+    .tutor-shell {
+        grid-template-columns: minmax(0, 1fr) !important
+    }
+
+    .chat-sidebar {
+        min-width: 0 !important;
+        max-width: 100%
+    }
+
+    .tutor-main {
+        min-width: 0 !important;
+        padding: 16px !important
+    }
+
+    .tutor-compose textarea {
+        max-width: 100%;
+        box-sizing: border-box
+    }
+
+    .footer {
+        margin-left: 0 !important;
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+        flex-wrap: wrap
+    }
+
+    .container {
+        padding-top: 20px;
+        padding-bottom: 28px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .app-sidebar {
+        transition: none
+    }
+}

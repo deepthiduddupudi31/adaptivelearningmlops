@@ -1,0 +1,14 @@
+fastapi>=0.115,<1
+uvicorn[standard]>=0.30,<1
+pydantic-settings>=2.4,<3
+psycopg[binary]>=3.2,<4
+pgvector>=0.3,<1
+google-genai>=1,<2
+pypdf>=5,<6
+python-multipart>=0.0.9
+# sentence-transformers
+python-jose[cryptography]
+pwdlib[argon2]
+azure-storage-blob
+azure-identity
+numpy
